@@ -1,0 +1,14 @@
+[Unit]
+Description=supervisord
+
+[Service]
+
+Type=forking
+ExecStart=supervisord
+SyslogIdentifier=my-app
+Restart=always
+RestartSec=20
+User=root
+
+[Install]
+WantedBy=multi-user.target
